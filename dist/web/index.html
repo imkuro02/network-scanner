@@ -1,0 +1,80 @@
+<html>
+	
+	<!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	-->
+	<style>
+	table, td, th {
+	  border: 1px solid black;
+	}
+
+	table {
+	  empty-cells: show;
+	  width: 100%;
+	  border-collapse: collapse;
+	}
+	
+	tr:nth-child(even) {
+ 		background-color: #f2f2f2;
+	
+	}
+	</style>
+
+
+	<head>
+		<title>My Page</title>
+		
+		<script type="text/javascript" src="/eel.js"></script>
+		
+		<script>	
+			async function reload() {
+				let value = await eel.reload()();
+				alert(value);
+			}
+
+		</script>
+
+	</head>
+	<body>
+
+	
+	<button onclick="add()">add</button>
+	<button onclick="remove()">remove</button>
+	<button onclick="empty()">empty</button>
+
+
+
+	<table>
+	    <tr  class="bg-info">
+		<th>Name</th>
+		<th align = "center">name2</th>
+	    </tr>
+
+	    <tbody id="myTable">
+		
+	    </tbody>
+	</table>
+	
+	<script>
+		var table = document.getElementById('myTable')
+		function add() {
+			console.log('test');
+			table.innerHTML += `
+				<td>"New cell "</td>
+				<td>"'huawei_mate_10_lite-f1069.home'"</td>
+				`;
+		}
+		function remove() {
+			table.removeChild(table.lastChild);
+			table.removeChild(table.lastChild);
+	
+
+		}
+		function empty() {
+			while(table.hasChildNodes()){table.removeChild(table.lastChild);}
+		}
+	</script>
+
+
+	</body>
+<html>
+
