@@ -1,4 +1,4 @@
-#!/home/imkuro/Projects/network/network_scanner/env/bin/python3
+#!/home/imkuro/Projects/network/network-scanner/env/bin/python3
 # -*- coding: utf-8 -*-
 import re
 import sys
