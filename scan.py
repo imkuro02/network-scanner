@@ -3,7 +3,6 @@ from time import sleep
 import socket 
 import datetime
 
-begin_time = datetime.datetime.now()
 
 class Scanner:
  
@@ -63,7 +62,23 @@ class Scanner:
             
         self.scanning = False # set scanning to false when finished
 
+def runScan():
+    begin_time = datetime.datetime.now()
+    
+    scan = Scanner(8,255) # num o' threads and range
+    scan.start()
+    devices = scan.devices # sorted(scan.devices)
+    for d in devices:
+        print(f'{d["ip"]}/{d["name"]}')
+    
+    print('full scan time:', datetime.datetime.now() - begin_time)
+
+    return(None)
+    
+
 if __name__ == '__main__':
+    runScan()
+    '''
     a = Scanner(8,255) # num of threads, how far to check
     a.start()
 
@@ -72,6 +87,6 @@ if __name__ == '__main__':
     for d in devices:
         print(f'{d["ip"]} - {d["name"]}')
 
-    print(datetime.datetime.now() - begin_time)
+    '''
 
 
