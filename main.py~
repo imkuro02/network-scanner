@@ -122,7 +122,7 @@ class Ui_MainWindow(object):
         self.treeWidget.clear()
         self.scanner.runScan(self)
 
-    def progressBarUpdate(self,val):
+    def progressBarUpdate(val):
         self.progressBar.setProperty("value",val)
                 
 
