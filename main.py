@@ -88,7 +88,7 @@ class Scanner:
                 #self.MainWindow.progressBar.setProperty("value", new_progress)
                 
                 if new_progress == 100:
-                    print('break')
+                    print('break progress counting')
                     break
                 #print(len(created_threads))
         
